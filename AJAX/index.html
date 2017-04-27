@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+
+    <form>
+        <p><label>Виберіть метод </label>
+            <input type="radio" name="metod" value="GET"> GET
+            <input type="radio" name="metod" value="POST"> POST <br>
+        </p>
+        <p><label for="apiKeyUser">Input Api key </label><input type="text" id="apiKeyUser"></p>
+        <p><label for="idUser">Input Profil-ID </label><input type="text" id="idUser"></p>
+        <p><button onclick='load("apiKeyUser", "idUser")' type="submit">Send</button></p>
+    </form>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
