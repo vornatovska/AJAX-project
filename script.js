@@ -3,7 +3,6 @@ function load() {
     var apiKey = document.getElementById("apiKeyUser").value;
     var profil = document.getElementById("idUser").value;
 
-
     var request = document.getElementsByName('request');
     var requestMetod = "GET";
 
@@ -21,6 +20,7 @@ function load() {
         return valid;
     }
 
+  
 
     for (var i =0 ; i < request.length; i++ ){
         if (request[i].checked && request[i].value == 0) {
@@ -50,7 +50,6 @@ function load() {
         var params = 'apiKey=' + apiKey +
             '&profil=' + profil;
         ajaxObject.open("POST",'/api/v1/inputRecord',true);
-        ajaxObject.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
         ajaxObject.send("params");
     }
 
@@ -59,10 +58,12 @@ function load() {
 
         if (httpRequest.readyState == 4) {
             if (httpRequest.status == 200) {
-                httpRequest.responseText;
+                alert(httpRequest.responseText);
             } else {
                 //alert('Request error');
             }
         }
     }
+
+    return false;
 }
